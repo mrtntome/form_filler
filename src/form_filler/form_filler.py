@@ -92,7 +92,7 @@ def extract_values(excel_path, map):
 def fill_form(pdf_path, extracted_values):
     try:
         pdf_form = FormWrapper(pdf_path)
-        filled = pdf_form.fill(extracted_values)
+        filled = pdf_form.fill(extracted_values, adobe_mode=True)
         filled_path = pdf_path.replace('.pdf', '_filled.pdf')
         with open(filled_path, "wb+") as output:
             output.write(filled.read())
