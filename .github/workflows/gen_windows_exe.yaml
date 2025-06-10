@@ -22,8 +22,7 @@ jobs:
       - name: Package Application with PyInstaller
         run: |
           pyinstaller build\form_filler.spec
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: Windows-exe
-          path: dist/form_filler.exe
+          files: dist/form_filler.exe
