@@ -1,21 +1,18 @@
-[tool.poetry]
+[project]
 name = "form_filler"
 version = "0.0.1"
 description = "Fill forms from Excel files"
-authors = ["Martin Tome <mrtn.tome@gmail.com>"]
-packages = [
-    {include = "src/form_filler"}
-]
-package-mode = false
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.9"
-pypdfform = "^2.5.0"
-jinja2 = "^3.1.6"
-pyyaml = "^6.0.2"
-openpyxl = "^3.1.5"
+requires-python = ">= 3.13.3"
+authors = [
+    {name = "Martin Tome", email = "mrtn.tome@gmail.com"},
+]
+dependencies = [
+    "Jinja2 == 3.1.6",
+    "openpyxl == 3.1.5",
+    "PyPDFForm == 2.5.0",
+    "PyYAML == 6.0.2",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pyinstaller"]
