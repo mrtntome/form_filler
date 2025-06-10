@@ -8,6 +8,7 @@ authors = [
     {name = "Martin Tome", email = "mrtn.tome@gmail.com"},
 ]
 dependencies = [
+    "pyinstaller == 6.14.1",
     "Jinja2 == 3.1.6",
     "openpyxl == 3.1.5",
     "PyPDFForm == 2.5.0",
